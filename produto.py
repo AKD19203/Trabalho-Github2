@@ -7,6 +7,9 @@ def produto ():
     while True:
         try:
             Preco_produto = float(input("Informe o preço do produto: "))
+            if Preco_produto <=0:
+                print(Fore.RED +"\nINSIRA UM PREÇO VÁLIDO!")
+                continue
         except ValueError:
             print(Fore.RED + "\nINSIRA UM '.' OU NUMERO VÁLIDO!")
             continue
@@ -14,6 +17,9 @@ def produto ():
         while True:
             try:
                 Quantidade_produto = int(input("Informe a quantidade do produto :"))
+                if Quantidade_produto <=0: 
+                    print(Fore.RED +"\nINSIRA UMA QUANTIDADE VÁLIDA!")
+                    continue
             except ValueError:
                 print(Fore.RED +"\nINSIRA UMA QUANTIDADE VÁLIDA!")
                 continue
