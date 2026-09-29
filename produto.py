@@ -2,13 +2,13 @@ from colorama import init, Fore, Back, Style
 init(autoreset=True)
 
 def produto ():
-    print("\n===CADASTRO PRODUTO===")
+    print(Fore.LIGHTBLUE_EX + "\n===CADASTRO PRODUTO===")
     Nome_produto = input("\nInforme o nome do produto: ").strip()
     while True:
         try:
-            Preco_produto = float(input("Informe o preço do produto: ")).replace(",",".")
+            Preco_produto = float(input("Informe o preço do produto: "))
         except ValueError:
-            print(Fore.RED + "\nINSIRA UM PREÇO VÁLIDO!")
+            print(Fore.RED + "\nINSIRA UM '.' OU NUMERO VÁLIDO!")
             continue
             
         while True:
